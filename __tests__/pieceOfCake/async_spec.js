@@ -6,7 +6,7 @@ describe('for asynchronous', () => {
 
       // <--start
       // Please write down the correct value. You should write the final result directly.
-      const expected = undefined;
+      const expected = ['after calling setTimeout', 'async callback triggered'];
       // --end->
 
       expect(logs).toEqual(expected);
@@ -27,7 +27,7 @@ describe('for asynchronous', () => {
 
         // <--start
         // Please write down the correct value. You should write the final result directly.
-        const expected = undefined;
+        const expected = ['after calling setTimeout', 'async callback triggered'];
         // --end->
 
         expect(logs).toEqual(expected);
@@ -48,7 +48,7 @@ describe('for asynchronous', () => {
       .then(() => {
         // <--start
         // Please write down the correct value. You should write the final result directly.
-        const expected = undefined;
+        const expected = ['Failed! >_<'];
         // --end->
 
         expect(logs).toEqual(expected);
@@ -68,7 +68,7 @@ describe('for asynchronous', () => {
       .then(() => {
         // <--start
         // Please write down the correct value. You should write the final result directly.
-        const expected = undefined;
+        const expected = ['Caught! >_<'];
         // --end->
 
         expect(logs).toEqual(expected);
@@ -80,7 +80,7 @@ describe('for asynchronous', () => {
     function asyncOperationThatWillFail() {
       return new Promise((_, reject) => reject(new Error('>_<')));
     }
-
+    /* 从第一个reject开始到第一个catch捕获异常之后，再继续执行then，直到遇到finally/then结束，或者throw抛出跳转至catch实现中断 */
     const logs = [];
     asyncOperationThatWillFail()
       .then(() => logs.push('Success!'))
@@ -93,7 +93,7 @@ describe('for asynchronous', () => {
       .then(() => {
         // <--start
         // Please write down the correct value. You should write the final result directly.
-        const expected = undefined;
+        const expected = ['Caught! >_<', 'Continued', 'Another continued', 'Error handled: Holy ~'];
         // --end->
         expect(logs).toEqual(expected);
         done();
