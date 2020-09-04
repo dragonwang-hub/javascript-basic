@@ -11,7 +11,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'Hello World';
     // --end->
 
     expect(outerFunction()).toEqual(expected);
@@ -26,7 +26,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'Hello World';
     // --end->
 
     expect(greeting(sayHello, 'World')).toEqual(expected);
@@ -37,7 +37,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 36;
     // --end->
 
     expect(square(6, 'Hello', 4)).toEqual(expected);
@@ -51,8 +51,8 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedForSingleArgument = undefined;
-    const expectedForTwoArguments = undefined;
+    const expectedForSingleArgument = -5;
+    const expectedForTwoArguments = 2;
     // --end->
 
     expect(minus(5)).toEqual(expectedForSingleArgument);
@@ -70,7 +70,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 16;
     // --end->
 
     expect(power(4)).toEqual(expected);
@@ -89,8 +89,8 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedReturnValue = undefined;
-    const expectedWord = undefined;
+    const expectedReturnValue = 'Changed';
+    const expectedWord = 'Origin';
     // --end->
 
     expect(returnValue).toEqual(expectedReturnValue);
@@ -110,8 +110,8 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expectedName = undefined;
-    const expectedReturnValueName = undefined;
+    const expectedName = 'Bob';
+    const expectedReturnValueName = 'Bob';
     // --end->
 
     expect(person.name).toEqual(expectedName);
@@ -128,7 +128,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'Hello';
     // --end->
 
     expect(actual).toEqual(expected);
@@ -145,7 +145,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 'Changed';
     // --end->
 
     expect(guessIfIAmChanged).toEqual(expected);
@@ -166,7 +166,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = '(((1 * 3) + 5) * 3)';
     // --end->
 
     expect(findSolution(24)).toEqual(expected);
@@ -183,7 +183,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 6;
     // --end->
 
     expect(sum(1, 2, 3)).toEqual(expected);
@@ -200,7 +200,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 6;
     // --end->
 
     const parameters = [1, 2, 3];
@@ -223,7 +223,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 25;
     // --end->
 
     expect(actual).toEqual(expected);
@@ -238,7 +238,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = [0, 3, 6];
     // --end->
 
     expect(labels).toEqual(expected);
@@ -248,12 +248,12 @@ describe('for function', () => {
     function greaterThan(n) {
       return value => value > n;
     }
-
+    /* value => value > n 是箭头函数，因此greaterThan(10)应当是返回了一个函数，(value) => value > 10 */
     const greaterThan10 = greaterThan(10);
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = false;
     // --end->
 
     expect(greaterThan10(3)).toEqual(expected);
@@ -269,7 +269,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = 11;
     // --end->
 
     expect(actual).toEqual(expected);
@@ -289,7 +289,7 @@ describe('for function', () => {
 
     // <--start
     // Please write down the correct value. You should write the final result directly.
-    const expected = undefined;
+    const expected = [0, 2, 4];
     // --end->
 
     expect(logs).toEqual(expected);
